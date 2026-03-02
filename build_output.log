@@ -1,0 +1,97 @@
+
+> finwise@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.13
+
+   Creating an optimized production build ...
+/*! 🌼 daisyUI 5.5.19 */
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/4) ...
+   Generating static pages (1/4) 
+   Generating static pages (2/4) 
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+Error: Could not find the module "/home/alzabir/Desktop/finwise-landing-page/node_modules/framer-motion/dist/es/index.mjs#motion#div" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136574)
+    at ek (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:140197)
+    at Array.toJSON (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135626)
+    at stringify (<anonymous>)
+    at eP (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142090)
+    at eE (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142569)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:150268)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  digest: '582834469'
+}
+Error: Could not find the module "/home/alzabir/Desktop/finwise-landing-page/node_modules/framer-motion/dist/es/index.mjs#motion#div" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136574)
+    at ek (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:140197)
+    at Array.toJSON (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135626)
+    at stringify (<anonymous>)
+    at eP (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142090)
+    at eE (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142569)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:150268)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  digest: '582834469'
+}
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+Error: Could not find the module "/home/alzabir/Desktop/finwise-landing-page/node_modules/framer-motion/dist/es/index.mjs#motion#div" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136574)
+    at ek (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:140197)
+    at Array.toJSON (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135626)
+    at stringify (<anonymous>)
+    at eP (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142090)
+    at eE (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142569)
+    at Timeout._onTimeout (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135346)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  digest: '852509291'
+}
+Error: Could not find the module "/home/alzabir/Desktop/finwise-landing-page/node_modules/framer-motion/dist/es/index.mjs#motion#div" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136574)
+    at ek (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:140197)
+    at Array.toJSON (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135626)
+    at stringify (<anonymous>)
+    at eP (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142090)
+    at eE (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142569)
+    at Timeout._onTimeout (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135346)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  digest: '852509291'
+}
+Error: Could not find the module "/home/alzabir/Desktop/finwise-landing-page/node_modules/framer-motion/dist/es/index.mjs#motion#div" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136574)
+    at ek (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:140197)
+    at Array.toJSON (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135626)
+    at stringify (<anonymous>)
+    at eP (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142090)
+    at eE (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142569)
+    at Timeout._onTimeout (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135346)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  digest: '852509291'
+}
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Could not find the module "/home/alzabir/Desktop/finwise-landing-page/node_modules/framer-motion/dist/es/index.mjs#motion#div" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at eb (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:136574)
+    at ek (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:140197)
+    at Array.toJSON (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:135626)
+    at stringify (<anonymous>)
+    at eP (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142090)
+    at eE (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:142569)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Timeout._onTimeout (/home/alzabir/Desktop/finwise-landing-page/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:12:150268)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+   Generating static pages (3/4) 
+ ✓ Generating static pages (4/4)
+
+> Export encountered errors on following paths:
+	/page: /

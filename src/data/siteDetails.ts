@@ -1,5 +1,5 @@
 export const siteDetails = {
-    siteName: 'Finwise',
+    siteName: 'Meeting ',
     siteUrl: 'https://finwise-omega.vercel.app/',
     metadata: {
         title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
@@ -7,6 +7,6 @@ export const siteDetails = {
     },
     language: 'en-us',
     locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "TechStartup"
+    siteLogo: `${process.env.BASE_PATH || ''}/icon-32x32.png`,
     googleAnalyticsId: '', // e.g. G-XXXXXXX,
 }
