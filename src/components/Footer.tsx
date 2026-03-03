@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { siteDetails } from '@/data/siteDetails';
 import { footerDetails } from '@/data/footer';
 import { getPlatformIconByName } from '@/utils';
+import AppStoreButton from './AppStoreButton';
+import PlayStoreButton from './PlayStoreButton';
 
 const Footer: React.FC = () => {
     return (
@@ -26,6 +28,10 @@ const Footer: React.FC = () => {
                     <p className="mt-3.5 text-foreground-accent">
                         {footerDetails.subheading}
                     </p>
+                    <div className="mt-5 flex flex-col sm:flex-row items-center gap-4">
+                        <AppStoreButton dark />
+                        <PlayStoreButton dark />
+                    </div>
                 </div>
                 <div>
                     <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
@@ -71,3 +77,21 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
