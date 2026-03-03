@@ -37,12 +37,12 @@ export function Navbar() {
             <Image
                 src={siteDetails.siteLogo}
                 alt={siteDetails.siteName}
-                width={36}
-                height={36}
-                className="w-8 h-8 object-contain"
+                width={48}
+                height={48}
+                className="w-120  h-120 object-contain"
             />
-            <span className="hidden sm:block text-white font-bold text-lg tracking-tight">
-                {siteDetails.siteName}
+            <span className="hidden sm:block text-foreground font-bold text-lg tracking-tight">
+                Meeting Transcript
             </span>
         </Link>
     );
@@ -92,7 +92,7 @@ export function Navbar() {
                         <Link
                             key={item.url}
                             href={item.url}
-                            className="text-sm font-bold text-black hover:text-black/70 transition-colors duration-200"
+                            className="text-sm font-bold text-foreground/80 hover:text-foreground transition-colors duration-200"
                         >
                             {item.text}
                         </Link>

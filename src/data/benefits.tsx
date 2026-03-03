@@ -1,70 +1,70 @@
-import { FiBarChart2, FiBriefcase, FiDollarSign, FiLock, FiPieChart, FiShield, FiTarget, FiTrendingUp, FiUser } from "react-icons/fi";
+import { FiClock, FiMic, FiTrendingUp, FiZap, FiUsers, FiCheckCircle, FiLock, FiShield, FiCalendar } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
 export const benefits: IBenefit[] = [
     {
-        title: "Smart Budgeting",
-        description: "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+        title: "Truly Unlimited Transcription",
+        description: "Break free from restrictive monthly caps. Meeting Transcript Unlimited is built for long conversations, ensuring you never run out of minutes.",
         bullets: [
             {
-                title: "Intelligent Categorization",
-                description: "Automatically sorts your transactions for crystal-clear insights.",
-                icon: <FiBarChart2 size={26} />
+                title: "No Recording Limits",
+                description: "Record hours of meetings without worrying about single-session cutoffs.",
+                icon: <FiClock size={26} />
             },
             {
-                title: "Customizable Goals",
-                description: "Set and track financial objectives that matter to you.",
-                icon: <FiTarget size={26} />
-            },
-            {
-                title: "Predictive Analysis",
-                description: "Get ahead of your finances with spending forecasts and alerts.",
+                title: "No Monthly Caps",
+                description: "Transcribe as much as you need every month. No tiered minute plans.",
                 icon: <FiTrendingUp size={26} />
+            },
+            {
+                title: "Crystal Clear Audio",
+                description: "Advanced audio enhancement focuses on voices while reducing background noise.",
+                icon: <FiMic size={26} />
             }
         ],
         imageSrc: "/images/mockup-1.webp"
     },
     {
-        title: "Seamless Investing",
-        description: "Start building wealth today, no financial degree required. Finwise makes investing accessible and straightforward.",
+        title: "AI-Powered Intelligence",
+        description: "Turn your raw audio into actionable insights automatically with our advanced AI processing engine.",
         bullets: [
             {
-                title: "Micro-Investing",
-                description: "Begin with as little as $1 and watch your money grow.",
-                icon: <FiDollarSign size={26} />
+                title: "Smart Summarization",
+                description: "Get concise meeting summaries and key action items instantly.",
+                icon: <FiZap size={26} />
             },
             {
-                title: "Expert Portfolios",
-                description: "Choose from investment strategies tailored to your risk tolerance.",
-                icon: <FiBriefcase size={26} />
+                title: "Speaker Diarization",
+                description: "Automatically identifies and separates different speakers in the transcript.",
+                icon: <FiUsers size={26} />
             },
             {
-                title: "Real-Time Performance",
-                description: "Track your investments with easy-to-understand metrics and visuals.",
-                icon: <FiPieChart size={26} />
+                title: "Auto Typo Correction",
+                description: "AI-driven correction ensures your transcripts are accurate and professional.",
+                icon: <FiCheckCircle size={26} />
             }
         ],
         imageSrc: "/images/mockup-2.webp"
     },
     {
-        title: "Bank-Grade Security",
-        description: "Your financial data deserves the best protection. Rest easy knowing Finwise employs cutting-edge security measures.",
+        title: "Private & Secure Offline Mode",
+        description: "Your sensitive meeting data never leaves your device. We process everything locally for maximum security.",
         bullets: [
             {
-                title: "Military-Grade Encryption",
-                description: "Your information is safeguarded with the highest level of encryption.",
+                title: "Offline Processing",
+                description: "Transcription happens on-device. No internet, no cloud, no leaks.",
                 icon: <FiLock size={26} />
             },
             {
-                title: "Biometric Authentication",
-                description: "Access your account securely with fingerprint or facial recognition.",
-                icon: <FiUser size={26} />
+                title: "Data Sovereignty",
+                description: "You own your data. We don't collect, store, or share your recordings.",
+                icon: <FiShield size={26} />
             },
             {
-                title: "Real-Time Fraud Detection",
-                description: "Our system constantly monitors for suspicious activity to keep your money safe.",
-                icon: <FiShield size={26} />
+                title: "Calendar Integration",
+                description: "Automatically organizes your transcripts based on your meeting schedule.",
+                icon: <FiCalendar size={26} />
             }
         ],
         imageSrc: "/images/mockup-1.webp"

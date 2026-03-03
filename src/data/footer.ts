@@ -7,7 +7,7 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
+    subheading: "Private, unlimited offline voice transcription with AI-powered meeting intelligence.",
     quickLinks: [
         {
             text: "Features",
@@ -22,7 +22,7 @@ export const footerDetails: {
             url: "#testimonials"
         }
     ],
-    email: 'address@yoursite.com',
+    email: 'contact@enyx.app',
     telephone: '+1 (123) 456-7890',
     socials: {
         // github: 'https://github.com',

@@ -1,9 +1,9 @@
 export const siteDetails = {
-    siteName: 'Meeting ',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'Meeting Transcript Unlimited',
+    siteUrl: 'https://enyx.app',
     metadata: {
-        title: 'Meeting Transcript Unlimited',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'Meeting Transcript Unlimited - Private AI Transcription',
+        description: 'Truly unlimited offline voice transcription with AI summaries and speaker diarization. No monthly caps, no cloud required.',
     },
     language: 'en-us',
     locale: 'en-US',

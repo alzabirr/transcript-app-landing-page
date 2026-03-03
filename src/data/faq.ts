@@ -3,23 +3,23 @@ import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: `How does the "Unlimited" model work?`,
+        answer: 'Unlike other apps that charge per minute or have monthly caps, our Unlimited plan allows you to record and transcribe as much as you need without any extra costs or session limits.',
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: `Is my meeting data secure?`,
+        answer: 'Yes. By default, your audio is processed offline on your device. This means your sensitive conversations never leave your phone or computer, providing total privacy.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: 'Does it support multiple speakers?',
+        answer: `Yes! Our advanced speaker diarization identifies and labels different voices in the conversation, making it easy to follow who said what.`
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: 'What is AI Typo Correction?',
+        answer: 'Our AI engine automatically reviews your transcripts to identify and fix common transcription errors, ensuring a much higher accuracy rate for professional use.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: 'Can I use it without an internet connection?',
+        answer: 'Absolutely. The core transcription engine runs locally on your device, allowing you to record and transcribe anywhere, anytime, without needing data or WiFi.'
     }
 ];
