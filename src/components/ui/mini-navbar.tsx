@@ -101,8 +101,8 @@ export function Navbar() {
 
                 {/* Desktop right actions */}
                 <div className="hidden sm:flex items-center gap-4 shrink-0">
-                    <ThemeSwitcher />
                     {downloadButtonElement}
+                    <ThemeSwitcher />
                 </div>
 
                 {/* Mobile hamburger */}
@@ -142,8 +142,8 @@ export function Navbar() {
                     ))}
                 </nav>
                 <div className="flex items-center justify-center gap-4 w-full mt-2 pb-2">
-                    <ThemeSwitcher />
                     {downloadButtonElement}
+                    <ThemeSwitcher />
                 </div>
             </div>
         </header>
