@@ -39,7 +39,7 @@ export function Navbar() {
                 alt={siteDetails.siteName}
                 width={48}
                 height={48}
-                className="w-120  h-120 object-contain"
+                className="w-12 h-12 object-contain"
             />
             <span className="hidden sm:block text-foreground font-bold text-lg tracking-tight">
                 Meeting Transcript
