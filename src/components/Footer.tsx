@@ -9,6 +9,10 @@ import AppStoreButton from './AppStoreButton';
 import PlayStoreButton from './PlayStoreButton';
 
 const Footer: React.FC = () => {
+    const socialLinks = Object.entries(footerDetails.socials).filter(
+        (entry): entry is [string, string] => Boolean(entry[1])
+    );
+
     return (
         <footer className="bg-hero-background text-foreground py-10">
             <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -50,21 +54,17 @@ const Footer: React.FC = () => {
 
                     {footerDetails.telephone && <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">Phone: {footerDetails.telephone}</a>}
 
-                    {footerDetails.socials && (
+                    {socialLinks.length > 0 && (
                         <div className="mt-5 flex items-center gap-5 flex-wrap">
-                            {Object.keys(footerDetails.socials).map(platformName => {
-                                if (platformName && footerDetails.socials[platformName]) {
-                                    return (
-                                        <Link
-                                            href={footerDetails.socials[platformName]}
-                                            key={platformName}
-                                            aria-label={platformName}
-                                        >
-                                            {getPlatformIconByName(platformName)}
-                                        </Link>
-                                    )
-                                }
-                            })}
+                            {socialLinks.map(([platformName, url]) => (
+                                <Link
+                                    href={url}
+                                    key={platformName}
+                                    aria-label={platformName}
+                                >
+                                    {getPlatformIconByName(platformName)}
+                                </Link>
+                            ))}
                         </div>
                     )}
                 </div>

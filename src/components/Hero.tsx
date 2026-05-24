@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
 
             {/* Main content */}
             <div className="text-center">
-                <h1 className="text-3xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
+                <h1 className="mt-8 md:mt-0 text-3xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
                 {/* <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p> */}
                 <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
                     <AppStoreButton dark />
