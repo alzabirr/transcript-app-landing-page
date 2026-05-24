@@ -13,6 +13,7 @@ const manrope = Manrope({ subsets: ['latin'] });
 const sourceSans = Source_Sans_3({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteDetails.siteUrl),
   title: siteDetails.metadata.title,
   description: siteDetails.metadata.description,
   openGraph: {
@@ -46,9 +47,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-theme="dark" >
       <body
         className={`${manrope.className} ${sourceSans.className} antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { siteDetails } from '@/data/siteDetails';
 import { menuItems } from '@/data/menuItems';
-import { ThemeSwitcher } from './ThemeSwitcher';
+
 
 
 
@@ -102,7 +102,7 @@ export function Navbar() {
                 {/* Desktop right actions */}
                 <div className="hidden sm:flex items-center gap-4 shrink-0">
                     {downloadButtonElement}
-                    <ThemeSwitcher />
+
                 </div>
 
                 {/* Mobile hamburger */}
@@ -143,7 +143,7 @@ export function Navbar() {
                 </nav>
                 <div className="flex items-center justify-center gap-4 w-full mt-2 pb-2">
                     {downloadButtonElement}
-                    <ThemeSwitcher />
+
                 </div>
             </div>
         </header>

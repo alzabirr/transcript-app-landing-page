@@ -23,7 +23,7 @@ export const benefits: IBenefit[] = [
                 icon: <FiMic size={26} />
             }
         ],
-        imageSrc: "/images/mockup-1.webp"
+        imageSrc: "/images/mockup-1.png"
     },
     {
         title: "AI-Powered Intelligence",
@@ -67,6 +67,6 @@ export const benefits: IBenefit[] = [
                 icon: <FiCalendar size={26} />
             }
         ],
-        imageSrc: "/images/mockup-1.webp"
+        imageSrc: "/images/mockup-1.png"
     },
 ]
