@@ -1,15 +1,15 @@
 "use client"
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { IFeatureShowcase } from "@/data/featureShowcase";
+import { IBenefit } from "@/types";
 
 interface Props {
-    feature: IFeatureShowcase;
+    feature: IBenefit;
     index: number;
 }
 
 const FeatureShowcaseCard: React.FC<Props> = ({ feature, index }) => {
-    const { title, subtitle, imageSrc, imageAlt } = feature;
+    const { title, description, imageSrc } = feature;
 
     return (
         <section
@@ -69,7 +69,7 @@ const FeatureShowcaseCard: React.FC<Props> = ({ feature, index }) => {
                         maxWidth: "300px",
                     }}
                 >
-                    {subtitle}
+                    {description}
                 </motion.p>
 
                 {/* Phone mockup — large, sitting on the blob */}
@@ -82,7 +82,7 @@ const FeatureShowcaseCard: React.FC<Props> = ({ feature, index }) => {
                 >
                     <Image
                         src={imageSrc}
-                        alt={imageAlt}
+                        alt={title}
                         width={280}
                         height={560}
                         quality={100}
