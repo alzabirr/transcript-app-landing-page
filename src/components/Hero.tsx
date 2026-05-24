@@ -32,14 +32,14 @@ const Hero: React.FC = () => {
                 </div>
                 <Image
                     src={heroDetails.centerImageSrc}
-                    width={384}
-                    height={340}
+                    width={520}
+                    height={460}
                     quality={100}
-                    sizes="(max-width: 768px) 100vw, 384px"
+                    sizes="(max-width: 768px) 100vw, 520px"
                     priority={true}
                     unoptimized={true}
                     alt="app mockup"
-                    className='relative mt-12 md:mt-16 mx-auto z-10 w-[240px] sm:w-[300px] md:w-[384px] h-auto'
+                    className='relative mt-12 md:mt-16 mx-auto z-10 w-[360px] sm:w-[420px] md:w-[520px] h-auto'
                 />
             </div>
         </section>

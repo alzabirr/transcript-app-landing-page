@@ -1,4 +1,4 @@
-import { FiClock, FiWifi, FiMic, FiVolume2, FiAirplay, FiShield, FiUsers, FiCheckCircle, FiStar } from "react-icons/fi";
+import { FiClock, FiAirplay, FiStar } from "react-icons/fi";
 import { IBenefit } from "@/types";
 
 export const featureShowcases: IBenefit[] = [
@@ -22,6 +22,6 @@ export const featureShowcases: IBenefit[] = [
                 icon: <FiStar size={26} />,
             },
         ],
-        imageSrc: "/images/mockup-1.png",
+        imageSrc: "/images/mockup-2.webp",
     },
 ];
