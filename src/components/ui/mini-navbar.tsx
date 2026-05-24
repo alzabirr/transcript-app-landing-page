@@ -37,11 +37,12 @@ export function Navbar() {
             <Image
                 src={siteDetails.siteLogo}
                 alt={siteDetails.siteName}
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain"
+                width={40}
+                height={47}
+                className="h-10 w-auto object-contain sm:h-11"
+                priority
             />
-            <span className="hidden sm:block text-foreground font-bold text-lg tracking-tight">
+            <span className="hidden sm:block text-white font-bold text-lg tracking-tight">
                 Meeting Transcript
             </span>
         </Link>
@@ -72,9 +73,10 @@ export function Navbar() {
                         flex flex-col items-center
                         px-8 py-3
                         ${headerShapeClass}
-                        border border-white/10
-                        bg-[rgba(15,15,15,0.15)]
+                        border border-white/15
+                        bg-black/45
                         backdrop-blur-2xl
+                        shadow-[0_12px_40px_rgba(0,0,0,0.18)]
 
                         w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] sm:max-w-[1300px]
                         transition-[border-radius] duration-300 ease-in-out`}
@@ -92,7 +94,7 @@ export function Navbar() {
                         <Link
                             key={item.url}
                             href={item.url}
-                            className="text-sm font-bold text-foreground/80 hover:text-foreground transition-colors duration-200"
+                            className="text-sm font-bold text-white/80 hover:text-white transition-colors duration-200"
                         >
                             {item.text}
                         </Link>
@@ -107,7 +109,7 @@ export function Navbar() {
 
                 {/* Mobile hamburger */}
                 <button
-                    className="sm:hidden flex items-center justify-center w-8 h-8 text-white/70 focus:outline-none"
+                    className="sm:hidden flex items-center justify-center w-8 h-8 text-white/80 hover:text-white focus:outline-none"
                     onClick={toggleMenu}
                     aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
                 >

@@ -6,12 +6,12 @@ const UseCases: React.FC = () => {
     const items = [...useCases, ...useCases, ...useCases];
 
     return (
-        <div className="relative w-full overflow-hidden flex flex-col py-4 group">
+        <div className="relative w-full overflow-hidden flex flex-col py-4 group/marquee">
             {/* Fade edges */}
             <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
             <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
             
-            <div className="flex space-x-6 animate-[marquee-reverse_35s_linear_infinite] group-hover:[animation-play-state:paused] w-max">
+            <div className="flex space-x-6 animate-[marquee-reverse_35s_linear_infinite] group-hover/marquee:[animation-play-state:paused] w-max">
                 {items.map((useCase, index) => (
                     <div
                         key={index}

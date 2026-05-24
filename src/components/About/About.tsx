@@ -41,6 +41,29 @@ const cards = [
     },
 ];
 
+const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.93 },
+    visible: (i: number) => ({
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+            duration: 0.55,
+            delay: i * 0.12,
+            ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+        },
+    }),
+};
+
+const headerVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+    },
+};
+
 const About: React.FC = () => {
     const [activeIndex, setActiveIndex] = React.useState(0);
     const containerRef = React.useRef<HTMLDivElement>(null);
@@ -51,7 +74,7 @@ const About: React.FC = () => {
         const children = containerRef.current.children;
         let index = 0;
         let minDiff = Infinity;
-        
+
         for (let i = 0; i < children.length; i++) {
             const child = children[i] as HTMLElement;
             const diff = Math.abs(child.offsetLeft - scrollLeft - containerRef.current.offsetLeft);
@@ -72,20 +95,21 @@ const About: React.FC = () => {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
+                        variants={headerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-80px" }}
                         className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground mb-6 tracking-tight leading-tight"
                     >
                         Everything You Need,{' '}
-                        <span className="text-black">Nothing You Don't</span>
+                        <span className="text-black">Nothing You Don&apos;t</span>
                     </motion.h2>
-                    <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                    <motion.p
+                        variants={headerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                         className="text-base md:text-lg text-foreground-accent leading-relaxed max-w-2xl mx-auto"
                     >
                         No bloat, no subscriptions, no cloud. Just fast, private, and unlimited transcription — built to work anywhere, anytime, for everyone.
@@ -99,7 +123,7 @@ const About: React.FC = () => {
                         <span className="animate-pulse">➔</span>
                     </div>
 
-                    <div 
+                    <div
                         ref={containerRef}
                         onScroll={handleScroll}
                         className="flex overflow-x-auto w-full gap-5 pb-6 pt-2 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-4 -mx-4 justify-start"
@@ -107,10 +131,11 @@ const About: React.FC = () => {
                         {cards.map((card, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: index * 0.05 }}
+                                custom={index}
+                                variants={cardVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-40px" }}
                                 className="cursor-pointer snap-center shrink-0 w-[270px]"
                             >
                                 <div className="bg-white dark:bg-black/10 backdrop-blur-md rounded-2xl p-7 border border-black/5 dark:border-white/5 shadow-sm min-h-[250px] flex flex-col justify-between">
@@ -143,17 +168,18 @@ const About: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Desktop elegant clean Grid layout (No messy tilts) */}
+                {/* Desktop Grid — top 3 cards */}
                 <div className="hidden lg:grid lg:grid-cols-3 gap-8">
                     {cards.slice(0, 3).map((card, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ y: -6 }}
-                            className="bg-white/60 dark:bg-black/10 backdrop-blur-md rounded-3xl p-8 border border-black/5 dark:border-white/5 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+                            custom={index}
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-60px" }}
+                            whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.22 } }}
+                            className="bg-white/60 dark:bg-black/10 backdrop-blur-md rounded-3xl p-8 border border-black/5 dark:border-white/5 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer"
                         >
                             <div className="w-14 h-14 rounded-2xl bg-yellow-50 dark:bg-yellow-950/20 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-yellow-100 dark:group-hover:bg-yellow-950/40">
                                 {card.icon}
@@ -168,16 +194,18 @@ const About: React.FC = () => {
                     ))}
                 </div>
 
+                {/* Desktop Grid — bottom 2 cards */}
                 <div className="hidden lg:grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
                     {cards.slice(3, 5).map((card, index) => (
                         <motion.div
                             key={index + 3}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
-                            whileHover={{ y: -6 }}
-                            className="bg-white/60 dark:bg-black/10 backdrop-blur-md rounded-3xl p-8 border border-black/5 dark:border-white/5 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+                            custom={index + 3}
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, margin: "-60px" }}
+                            whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.22 } }}
+                            className="bg-white/60 dark:bg-black/10 backdrop-blur-md rounded-3xl p-8 border border-black/5 dark:border-white/5 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer"
                         >
                             <div className="w-14 h-14 rounded-2xl bg-yellow-50 dark:bg-yellow-950/20 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-yellow-100 dark:group-hover:bg-yellow-950/40">
                                 {card.icon}

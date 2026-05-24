@@ -15,10 +15,11 @@
 
 html {
   @apply scroll-smooth;
+  font-size: 93.75%; /* Scales down all rem-based sizes from 16px to 15px base */
 }
 
 body {
-  @apply text-lg;
+  @apply text-base;
 
   color: var(--foreground);
   background: var(--background);

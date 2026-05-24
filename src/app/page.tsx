@@ -19,13 +19,13 @@ const HomePage: React.FC = () => {
       <Container className="py-8 lg:py-16">
         <Benefits />
 
-        <Section
-          id="features"
-          title="Everything You Need"
-          description="Powerful tools to make transcription seamless and secure."
-        >
+        <section id="features" className="py-2 lg:py-4 pt-16 lg:pt-24">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-2">Everything You Need</h2>
+            <p className="text-sm text-foreground-accent">Powerful tools to make transcription seamless and secure.</p>
+          </div>
           <FeaturesGrid />
-        </Section>
+        </section>
 
         <Section
           id="use-cases"

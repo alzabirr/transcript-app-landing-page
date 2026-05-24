@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                     <p className="mt-3.5 text-foreground-accent">
                         {footerDetails.subheading}
                     </p>
-                    <div className="mt-5 flex flex-col sm:flex-row items-center gap-4">
+                    <div className="mt-5 flex flex-col sm:flex-row items-center gap-4 sm:gap-5 origin-left scale-[0.75]">
                         <AppStoreButton dark />
                         <PlayStoreButton dark />
                     </div>

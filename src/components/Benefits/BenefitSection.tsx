@@ -4,7 +4,6 @@ import clsx from "clsx";
 import { motion, Variants } from "framer-motion"
 
 import BenefitBullet from "./BenefitBullet";
-import SectionTitle from "../SectionTitle";
 import { IBenefit } from "@/types";
 
 interface Props {
@@ -47,7 +46,7 @@ export const childVariants = {
 };
 
 const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
-    const { title, description, imageSrc, bullets } = benefit;
+    const { title, description, imageSrc, bullets, imageClassName } = benefit;
 
     return (
         <section className="benefit-section">
@@ -67,18 +66,16 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                             className="flex flex-col w-full"
                             variants={childVariants}
                         >
-                            <SectionTitle>
-                                <h3 className="lg:max-w-2xl">
-                                    {title}
-                                </h3>
-                            </SectionTitle>
+                            <h3 className="lg:max-w-2xl text-3xl lg:text-4xl lg:leading-snug font-bold">
+                                {title}
+                            </h3>
 
-                            <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-foreground-accent">
+                            <p className="mt-3 mx-auto lg:ml-0 leading-normal text-base lg:text-lg text-foreground-accent">
                                 {description}
                             </p>
                         </motion.div>
 
-                        <div className="hidden lg:block mx-auto lg:ml-0 w-full">
+                        <div className="hidden lg:block mx-auto lg:ml-0 w-full mt-6">
                             {bullets.map((item, index) => (
                                 <BenefitBullet key={index} title={item.title} icon={item.icon} description={item.description} />
                             ))}
@@ -91,11 +88,11 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                         <Image
                             src={imageSrc}
                             alt={title}
-                            width={384}
-                            height={762}
+                            width={320}
+                            height={640}
                             quality={100}
-                            sizes="(max-width: 640px) 200px, (max-width: 768px) 280px, (max-width: 1024px) 320px, 384px"
-                            className="h-[400px] w-[200px] object-fill sm:h-[560px] sm:w-[280px] md:h-[640px] md:w-[320px] lg:h-[762px] lg:w-[384px] lg:ml-0"
+                            sizes="(max-width: 640px) 180px, (max-width: 768px) 230px, (max-width: 1024px) 260px, 300px"
+                            className={clsx("h-[360px] w-[180px] object-fill sm:h-[460px] sm:w-[230px] md:h-[520px] md:w-[260px] lg:h-[600px] lg:w-[300px] lg:ml-0 rounded-3xl", imageClassName)}
                         />
                     </div>
                 </div>

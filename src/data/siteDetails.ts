@@ -1,5 +1,5 @@
 export const siteDetails = {
-    siteName: 'Meeting Transcript Unlimited',
+    siteName: 'Enyx Digital',
     siteUrl: 'https://enyx.app',
     metadata: {
         title: 'Meeting Transcript Unlimited - Private AI Transcription',
@@ -9,4 +9,4 @@ export const siteDetails = {
     locale: 'en-US',
     siteLogo: `${process.env.BASE_PATH || ''}/icon-32x32.png`,
     googleAnalyticsId: '', // e.g. G-XXXXXXX,
-}
+}       
