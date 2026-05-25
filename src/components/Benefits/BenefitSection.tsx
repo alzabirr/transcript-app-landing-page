@@ -84,15 +84,15 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                 </div>
 
                 <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
-                    <div className={clsx("w-fit flex rounded-[32px] p-4 neu-card", { "justify-start": imageAtRight, "justify-end": !imageAtRight })}>
+                    <div className={clsx("w-fit flex", { "justify-start": imageAtRight, "justify-end": !imageAtRight })}>
                         <Image
                             src={imageSrc}
                             alt={title}
-                            width={320}
-                            height={640}
+                            width={280}
+                            height={660}
                             quality={100}
-                            sizes="(max-width: 640px) 180px, (max-width: 768px) 230px, (max-width: 1024px) 260px, 300px"
-                            className={clsx("h-[360px] w-[180px] object-fill sm:h-[460px] sm:w-[230px] md:h-[520px] md:w-[260px] lg:h-[600px] lg:w-[300px] lg:ml-0 rounded-[24px]", imageClassName)}
+                            sizes="(max-width: 640px) 165px, (max-width: 768px) 205px, (max-width: 1024px) 235px, 270px"
+                            className={clsx("h-[330px] w-[165px] object-fill sm:h-[410px] sm:w-[205px] md:h-[470px] md:w-[235px] lg:h-[540px] lg:w-[270px] lg:ml-0 rounded-[24px]", imageClassName)}
                         />
                     </div>
                 </div>

@@ -39,7 +39,7 @@ export function Navbar() {
                 alt={siteDetails.siteName}
                 width={40}
                 height={47}
-                className="h-10 w-auto object-contain sm:h-11"
+                className="h-7 w-auto object-contain sm:h-8"
                 priority
             />
             <span className="hidden sm:block text-foreground font-bold text-lg tracking-normal">
@@ -65,22 +65,22 @@ export function Navbar() {
 
     return (
         <header
-            className={`fixed top-6 left-1/2 -translate-x-1/2 z-[100]
+            className={`fixed top-6 right-4 z-[100] sm:left-1/2 sm:right-auto sm:-translate-x-1/2
                         flex flex-col items-center
-                        px-8 py-3
+                        sm:px-8 sm:py-3
                         ${headerShapeClass}
                         border border-white/70
                         bg-[#F4F6F8]/80
                         backdrop-blur-xl
                         shadow-[0_2px_12px_rgba(44,44,44,0.06)]
 
-                        w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] sm:max-w-[1300px]
+                        ${isOpen ? 'w-56 px-5 py-3' : 'w-8 p-0'} sm:w-[calc(100%-4rem)] sm:max-w-[1300px]
                         transition-[border-radius] duration-300 ease-in-out`}
         >
-            <div className="relative flex items-center justify-between w-full">
+            <div className="relative flex items-center justify-end w-full sm:justify-between">
 
                 {/* Logo */}
-                <div className="flex items-center shrink-0">
+                <div className="hidden items-center shrink-0 sm:flex">
                     {logoElement}
                 </div>
 

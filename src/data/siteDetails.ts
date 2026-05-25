@@ -7,6 +7,6 @@ export const siteDetails = {
     },
     language: 'en-us',
     locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/icon-32x32.png`,
+    siteLogo: `${process.env.BASE_PATH || ''}/images/blck_logo.png`,
     googleAnalyticsId: '', // e.g. G-XXXXXXX,
 }       

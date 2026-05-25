@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
     return (
         <section
             id="hero"
-            className="relative flex items-center justify-center pb-14 pt-28 md:pt-36 px-5 overflow-hidden"
+            className="relative flex min-h-[920px] items-start justify-center px-5 pb-20 pt-24 md:min-h-[980px] md:pt-28 lg:min-h-[1040px] lg:pt-30 overflow-hidden"
         >
             <div className="absolute left-0 top-0 bottom-0 -z-10 w-full">
                 <div className="schematic-grid absolute inset-0 h-full w-full bg-hero-background" />
@@ -29,30 +29,20 @@ const Hero: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="relative mx-auto flex min-h-[450px] w-full max-w-[620px] items-center justify-center">
-                    <div className="absolute h-[360px] w-[360px] rounded-full border border-primary/25 sm:h-[450px] sm:w-[450px]" />
-                    <div className="absolute h-[250px] w-[250px] rounded-full border border-white/80 sm:h-[330px] sm:w-[330px]" />
-                    <div className="absolute left-[10%] top-[22%] hidden h-px w-[30%] rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent sm:block" />
-                    <div className="absolute bottom-[24%] right-[8%] hidden h-px w-[32%] -rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent sm:block" />
-                    <div className="absolute right-[2%] top-[15%] hidden rounded-[20px] px-4 py-3 text-sm font-medium text-foreground sm:block neu-card-soft">
-                        Local model
-                    </div>
-                    <div className="absolute bottom-[16%] left-[2%] hidden rounded-[20px] px-4 py-3 text-sm font-medium text-foreground sm:block neu-card-soft">
-                        Private notes
-                    </div>
-                    <div className="neu-card relative z-10 rounded-[32px] p-5">
-                        <Image
-                            src={heroDetails.centerImageSrc}
-                            width={400}
-                            height={350}
-                            quality={100}
-                            sizes="(max-width: 768px) 100vw, 400px"
-                            priority={true}
-                            unoptimized={true}
-                            alt="app mockup"
-                            className='relative z-10 h-auto w-[250px] sm:w-[320px] md:w-[360px]'
-                        />
-                    </div>
+                <div className="relative mx-auto flex min-h-[430px] w-full max-w-[560px] items-center justify-center">
+                    <div className="absolute h-[300px] w-[300px] rounded-full border border-primary/25 sm:h-[390px] sm:w-[390px]" />
+                    <div className="absolute h-[210px] w-[210px] rounded-full border border-white/80 sm:h-[280px] sm:w-[280px]" />
+                    <Image
+                        src={heroDetails.centerImageSrc}
+                        width={340}
+                        height={340}
+                        quality={100}
+                        sizes="(max-width: 768px) 100vw, 340px"
+                        priority={true}
+                        unoptimized={true}
+                        alt="app mockup"
+                        className='relative z-10 h-auto w-[200px] sm:w-[280px] md:w-[320px]'
+                    />
                 </div>
             </div>
         </section>

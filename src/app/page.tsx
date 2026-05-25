@@ -10,6 +10,7 @@ import CTA from "@/components/CTA";
 import About from "@/components/About/About";
 import UseCases from "@/components/UseCases";
 import FeaturesGrid from "@/components/FeaturesGrid";
+import { testimonials } from './../data/testimonials';
 
 
 const HomePage: React.FC = () => {
@@ -45,13 +46,14 @@ const HomePage: React.FC = () => {
           <Pricing />
         </Section>
 
-        <Section
+     {/* testimonials section  */}
+        {/* <Section
           id="testimonials"
           title="What Our Clients Say"
           description="Hear from those who have partnered with us."
         >
-          <Testimonials />
-        </Section>
+          {/* <Testimonials /> */}
+        {/* </Section> */} 
 
         <FAQ />
 
