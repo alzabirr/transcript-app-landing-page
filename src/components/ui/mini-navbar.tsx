@@ -90,7 +90,7 @@ export function Navbar() {
                         <Link
                             key={item.url}
                             href={item.url}
-                            className="text-sm font-medium text-foreground-accent hover:text-primary transition-colors duration-200"
+                            className="text-sm font-medium text-foreground hover:text-primary transition-colors duration-200"
                         >
                             {item.text}
                         </Link>
@@ -132,7 +132,7 @@ export function Navbar() {
                         <Link
                             key={item.url}
                             href={item.url}
-                            className="text-foreground-accent hover:text-primary transition-colors w-full text-center text-sm"
+                            className="text-foreground hover:text-primary transition-colors w-full text-center text-sm"
                             onClick={toggleMenu}
                         >
                             {item.text}
