@@ -10,37 +10,50 @@ const Hero: React.FC = () => {
     return (
         <section
             id="hero"
-            className="relative flex items-center justify-center pb-0 pt-20 md:pt-28 px-5 overflow-hidden"
+            className="relative flex items-center justify-center pb-14 pt-28 md:pt-36 px-5 overflow-hidden"
         >
-            {/* Background grid */}
             <div className="absolute left-0 top-0 bottom-0 -z-10 w-full">
-                <div className="absolute inset-0 h-full w-full bg-hero-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]">
-                </div>
+                <div className="schematic-grid absolute inset-0 h-full w-full bg-hero-background" />
             </div>
 
-            {/* Bottom gradient */}
-            <div className="absolute left-0 right-0 bottom-0 backdrop-blur-[2px] h-24 bg-gradient-to-b from-transparent via-[rgba(233,238,255,0.5)] to-[rgba(202,208,230,0.5)] -z-10">
-            </div>
-
-            {/* Main content */}
-            <div className="text-center">
-                <h1 className="mt-8 md:mt-0 text-3xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
-                {/* <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p> */}
-                <div className="mt-6 flex flex-col sm:flex-row items-center sm:gap-4 w-fit mx-auto">
+            <div className="grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[0.92fr_1.08fr]">
+                <div className="text-center lg:text-left">
+                    <div className="neu-pressed mx-auto mb-6 w-fit rounded-[20px] px-4 py-2 font-mono text-xs font-medium uppercase text-primary lg:mx-0">
+                        Offline AI transcription
+                    </div>
+                    <h1 className="text-4xl font-bold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-6xl">{heroDetails.heading}</h1>
+                    <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-foreground-accent lg:mx-0">{heroDetails.subheading}</p>
+                    <div className="mt-7 flex flex-col items-center sm:flex-row sm:gap-4 lg:items-start">
                     <AppStoreButton dark />
                     <PlayStoreButton dark />
+                    </div>
                 </div>
-                <Image
-                    src={heroDetails.centerImageSrc}
-                    width={400}
-                    height={350}
-                    quality={100}
-                    sizes="(max-width: 768px) 100vw, 400px"
-                    priority={true}
-                    unoptimized={true}
-                    alt="app mockup"
-                    className='relative mt-8 md:mt-12 mx-auto z-10 w-[280px] sm:w-[320px] md:w-[400px] h-auto'
-                />
+
+                <div className="relative mx-auto flex min-h-[450px] w-full max-w-[620px] items-center justify-center">
+                    <div className="absolute h-[360px] w-[360px] rounded-full border border-primary/25 sm:h-[450px] sm:w-[450px]" />
+                    <div className="absolute h-[250px] w-[250px] rounded-full border border-white/80 sm:h-[330px] sm:w-[330px]" />
+                    <div className="absolute left-[10%] top-[22%] hidden h-px w-[30%] rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent sm:block" />
+                    <div className="absolute bottom-[24%] right-[8%] hidden h-px w-[32%] -rotate-12 bg-gradient-to-r from-transparent via-primary to-transparent sm:block" />
+                    <div className="absolute right-[2%] top-[15%] hidden rounded-[20px] px-4 py-3 text-sm font-medium text-foreground sm:block neu-card-soft">
+                        Local model
+                    </div>
+                    <div className="absolute bottom-[16%] left-[2%] hidden rounded-[20px] px-4 py-3 text-sm font-medium text-foreground sm:block neu-card-soft">
+                        Private notes
+                    </div>
+                    <div className="neu-card relative z-10 rounded-[32px] p-5">
+                        <Image
+                            src={heroDetails.centerImageSrc}
+                            width={400}
+                            height={350}
+                            quality={100}
+                            sizes="(max-width: 768px) 100vw, 400px"
+                            priority={true}
+                            unoptimized={true}
+                            alt="app mockup"
+                            className='relative z-10 h-auto w-[250px] sm:w-[320px] md:w-[360px]'
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );

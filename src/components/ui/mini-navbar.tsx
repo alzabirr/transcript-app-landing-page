@@ -42,7 +42,7 @@ export function Navbar() {
                 className="h-10 w-auto object-contain sm:h-11"
                 priority
             />
-            <span className="hidden sm:block text-white font-bold text-lg tracking-tight">
+            <span className="hidden sm:block text-foreground font-bold text-lg tracking-normal">
                 Meeting Transcript
             </span>
         </Link>
@@ -50,17 +50,13 @@ export function Navbar() {
 
     const downloadButtonElement = (
         <div className="relative group w-full sm:w-auto">
-            {/* glow */}
-            <div className="absolute inset-0 -m-2 rounded-full hidden sm:block
-                            bg-yellow-200 opacity-20 blur-lg pointer-events-none
-                            transition-all duration-300
-                            group-hover:opacity-40 group-hover:blur-xl group-hover:-m-3" />
             <Link
                 href="#cta"
-                className="relative z-10 px-6 py-2 text-sm font-semibold text-black
-                           bg-gradient-to-br from-yellow-300 to-yellow-500
-                           rounded-full hover:from-yellow-400 hover:to-yellow-600
-                           transition-all duration-200 inline-flex items-center justify-center whitespace-nowrap"
+                className="relative z-10 px-6 py-2.5 text-sm font-semibold text-white
+                           bg-primary rounded-[20px] hover:bg-primary-accent
+                           shadow-[0_2px_8px_rgba(44,44,44,0.08)]
+                           transition-all duration-200 inline-flex items-center justify-center whitespace-nowrap
+                           active:translate-y-px"
             >
                 Download App
             </Link>
@@ -73,10 +69,10 @@ export function Navbar() {
                         flex flex-col items-center
                         px-8 py-3
                         ${headerShapeClass}
-                        border border-white/15
-                        bg-black/45
-                        backdrop-blur-2xl
-                        shadow-[0_12px_40px_rgba(0,0,0,0.18)]
+                        border border-white/70
+                        bg-[#F4F6F8]/80
+                        backdrop-blur-xl
+                        shadow-[0_2px_12px_rgba(44,44,44,0.06)]
 
                         w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] sm:max-w-[1300px]
                         transition-[border-radius] duration-300 ease-in-out`}
@@ -94,7 +90,7 @@ export function Navbar() {
                         <Link
                             key={item.url}
                             href={item.url}
-                            className="text-sm font-bold text-white/80 hover:text-white transition-colors duration-200"
+                            className="text-sm font-medium text-foreground-accent hover:text-primary transition-colors duration-200"
                         >
                             {item.text}
                         </Link>
@@ -109,7 +105,7 @@ export function Navbar() {
 
                 {/* Mobile hamburger */}
                 <button
-                    className="sm:hidden flex items-center justify-center w-8 h-8 text-white/80 hover:text-white focus:outline-none"
+                    className="sm:hidden flex items-center justify-center w-8 h-8 text-foreground-accent hover:text-primary focus:outline-none"
                     onClick={toggleMenu}
                     aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
                 >
@@ -131,12 +127,12 @@ export function Navbar() {
                             transition-all ease-in-out duration-300 overflow-hidden
                             ${isOpen ? 'max-h-[1000px] opacity-100 pt-4' : 'max-h-0 opacity-0 pt-0 pointer-events-none'}`}
             >
-                <nav className="flex flex-col items-center space-y-4 w-full pb-4 border-t border-white/10 pt-4">
+                <nav className="flex flex-col items-center space-y-4 w-full pb-4 border-t border-white/70 pt-4">
                     {menuItems.map((item) => (
                         <Link
                             key={item.url}
                             href={item.url}
-                            className="text-white/60 hover:text-white transition-colors w-full text-center text-sm"
+                            className="text-foreground-accent hover:text-primary transition-colors w-full text-center text-sm"
                             onClick={toggleMenu}
                         >
                             {item.text}

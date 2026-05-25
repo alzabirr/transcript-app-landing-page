@@ -15,15 +15,15 @@ const FAQ: React.FC = () => {
                     </h2>
                 </div>
 
-                <div className="w-full lg:max-w-2xl mx-auto border-b">
+                <div className="w-full lg:max-w-2xl mx-auto rounded-[20px] p-3 neu-card-soft">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="mb-7">
+                        <div key={index} className="mb-2 last:mb-0">
                             <Disclosure>
                                 {({ open }) => (
                                     <div>
-                                        <DisclosureButton className="flex items-center justify-between w-full px-4 pt-7 text-left border-t">
+                                        <DisclosureButton className="flex items-center justify-between w-full rounded-[16px] px-4 py-5 text-left transition-colors hover:text-primary">
                                             <span className="text-lg lg:text-xl font-semibold">{faq.question}</span>
-                                            {open ? <BiMinus className="w-5 h-5 text-secondary" /> : <BiPlus className="w-5 h-5 text-secondary" />}
+                                            {open ? <BiMinus className="w-5 h-5 text-primary" /> : <BiPlus className="w-5 h-5 text-primary" />}
                                         </DisclosureButton>
                                         <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">
                                             {faq.answer}

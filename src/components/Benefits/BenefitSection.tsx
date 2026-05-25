@@ -51,9 +51,9 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
     return (
         <section className="benefit-section">
             <motion.div
-                className="flex flex-wrap flex-col items-center justify-center gap-2 lg:flex-row lg:gap-20 lg:flex-nowrap mb-12 lg:mb-24"
+                className="flex flex-wrap flex-col items-center justify-center gap-8 lg:flex-row lg:gap-20 lg:flex-nowrap mb-12 lg:mb-24"
                 variants={containerVariants}
-                initial="offscreen"
+                initial="onscreen"
                 whileInView="onscreen"
                 viewport={{ once: true }}
             >
@@ -84,7 +84,7 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                 </div>
 
                 <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
-                    <div className={clsx("w-fit flex", { "justify-start": imageAtRight, "justify-end": !imageAtRight })}>
+                    <div className={clsx("w-fit flex rounded-[32px] p-4 neu-card", { "justify-start": imageAtRight, "justify-end": !imageAtRight })}>
                         <Image
                             src={imageSrc}
                             alt={title}
@@ -92,7 +92,7 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
                             height={640}
                             quality={100}
                             sizes="(max-width: 640px) 180px, (max-width: 768px) 230px, (max-width: 1024px) 260px, 300px"
-                            className={clsx("h-[360px] w-[180px] object-fill sm:h-[460px] sm:w-[230px] md:h-[520px] md:w-[260px] lg:h-[600px] lg:w-[300px] lg:ml-0 rounded-3xl", imageClassName)}
+                            className={clsx("h-[360px] w-[180px] object-fill sm:h-[460px] sm:w-[230px] md:h-[520px] md:w-[260px] lg:h-[600px] lg:w-[300px] lg:ml-0 rounded-[24px]", imageClassName)}
                         />
                     </div>
                 </div>

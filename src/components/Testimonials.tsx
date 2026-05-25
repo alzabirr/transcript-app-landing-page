@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
             {testimonials.map((testimonial, index) => (
                 <div
                     key={index}
-                    className=""
+                    className="neu-card-soft rounded-[20px] p-7"
                 >
                     <div className="flex items-center mb-4 w-full justify-center lg:justify-start">
                         <Image

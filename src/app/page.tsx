@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
         <section id="features" className="py-2 lg:py-4 pt-16 lg:pt-24">
           <div className="text-center mb-4">
             <h2 className="text-2xl lg:text-3xl font-bold mb-2">Everything You Need</h2>
-            <p className="text-sm text-foreground-accent">Powerful tools to make transcription seamless and secure.</p>
+            <p className="text-sm text-foreground-accent">Powerful tools for fast, private transcription.</p>
           </div>
           <FeaturesGrid />
         </section>

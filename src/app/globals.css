@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #FED835;
-  --secondary: #304fff;
+  --background: #F4F6F8;
+  --foreground: #2C2C2C;
+  --primary: #EB5757;
+  --secondary: #2C2C2C;
 
-  --primary-accent: #e5c230;
-  --foreground-accent: #454545;
-  --hero-background: #F3F3F5;
+  --primary-accent: #D94646;
+  --foreground-accent: #626A73;
+  --hero-background: #F4F6F8;
+  --shadow-neu-dark: #D1D9E6;
+  --shadow-neu-light: #FFFFFF;
+  --surface: #F4F6F8;
+  --surface-border: rgba(255, 255, 255, 0.72);
 }
 
 html {
@@ -22,8 +26,10 @@ body {
   @apply text-base;
 
   color: var(--foreground);
-  background: var(--background);
-  font-family: "Source Sans 3", sans-serif;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.9), transparent 30rem),
+    linear-gradient(180deg, #F7F9FB 0%, var(--background) 42%, #EEF2F6 100%);
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -35,7 +41,7 @@ body {
 }
 
 .manrope {
-  font-family: "Manrope", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -46,9 +52,41 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Manrope", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono), monospace;
+}
+
+.neu-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  box-shadow: 10px 10px 20px var(--shadow-neu-dark), -10px -10px 20px var(--shadow-neu-light);
+}
+
+.neu-card-soft {
+  background: rgba(244, 246, 248, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 8px 8px 18px rgba(209, 217, 230, 0.78), -8px -8px 18px rgba(255, 255, 255, 0.92);
+}
+
+.neu-pressed {
+  background: var(--surface);
+  box-shadow: inset 7px 7px 14px rgba(209, 217, 230, 0.85), inset -7px -7px 14px rgba(255, 255, 255, 0.9);
+}
+
+.schematic-grid {
+  background-image:
+    linear-gradient(to right, rgba(44, 44, 44, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(44, 44, 44, 0.055) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 70% 58% at 50% 48%, #000 55%, transparent 100%);
 }
 
 #logos svg {

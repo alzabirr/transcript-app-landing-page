@@ -11,7 +11,7 @@ const BenefitBullet: React.FC<IBenefitBullet> = ({ title, description, icon }: I
             className="flex flex-col items-center mt-8 gap-3 lg:gap-5 lg:flex-row lg:items-start"
             variants={childVariants}
         >
-            <div className="flex justify-center mx-auto lg:mx-0 flex-shrink-0 mt-1.5 w-fit text-primary">
+            <div className="flex justify-center mx-auto lg:mx-0 flex-shrink-0 mt-1.5 w-fit rounded-[16px] p-3 text-primary neu-pressed">
                 {icon}
             </div>
             <div>

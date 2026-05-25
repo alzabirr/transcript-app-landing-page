@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { Source_Sans_3, Manrope } from "next/font/google";
+import { JetBrains_Mono, Roboto } from "next/font/google";
 
 import { Navbar } from "@/components/ui/mini-navbar";
 import Footer from "@/components/Footer";
@@ -9,8 +9,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ['latin'] });
-const sourceSans = Source_Sans_3({ subsets: ['latin'] });
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'] });
+const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteDetails.siteUrl),
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning data-theme="dark" >
       <body
-        className={`${manrope.className} ${sourceSans.className} antialiased`}
+        className={`${roboto.className} ${jetBrainsMono.variable} antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider
