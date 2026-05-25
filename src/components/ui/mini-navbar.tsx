@@ -74,7 +74,7 @@ export function Navbar() {
                         backdrop-blur-xl
                         shadow-[0_2px_12px_rgba(44,44,44,0.06)]
 
-                        ${isOpen ? 'w-56 px-5 py-3' : 'w-8 p-0'} sm:w-[calc(100%-4rem)] sm:max-w-[1300px]
+                        ${isOpen ? 'w-56 px-5 py-3' : 'w-10 p-0'} sm:w-[calc(100%-4rem)] sm:max-w-[1300px]
                         transition-[border-radius] duration-300 ease-in-out`}
         >
             <div className="relative flex items-center justify-end w-full sm:justify-between">
@@ -105,7 +105,7 @@ export function Navbar() {
 
                 {/* Mobile hamburger */}
                 <button
-                    className="sm:hidden flex items-center justify-center w-8 h-8 text-foreground-accent hover:text-primary focus:outline-none"
+                    className="sm:hidden flex items-center justify-center w-10 h-10 text-foreground-accent hover:text-primary focus:outline-none"
                     onClick={toggleMenu}
                     aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
                 >
